@@ -1,15 +1,19 @@
+
+declare -A path
+declare -A vpath #Virtualenv path
+
 # project absulate location
 mnt_d='/mnt/d'
 dj_path=$mnt_d'/Django'
 bash_path=$mnt_d'/bash'
-declare -A path
+
 path['django']=$dj_path
 path['real']=$dj_path'/real'
 path['bash']=$bash_path
 path['workon']=$bash_path'/Workon_bash'
 
 # Virtualenv path 
-declare -A vpath #Virtualenv path
+
 vpath['real']=${path[real]}'/env/bin/activate'
 
 function checking_p()
